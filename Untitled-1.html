@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oma Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="hero">
+    <div id="bg-animation"></div>
+ <!-- Tausta-animaatio (valinnainen) -->
+    
+    <div class="hero-content">
+      <h1>Terve! Olen <span class="highlight">Leo Apell</span></h1>
+      <p class="tagline">Sovelluskehittäjä • Koodari • Luova ongelmanratkaisija</p>
+      <a href="#portfolio" class="cta-button">Katso työni</a>
+    </div>
+  </div>
+
+ <section id="about">
+    <h2>Minusta</h2>
+    <p>
+      Olen intohimoinen kehittäjä, jolla on kokemusta moderneista web- ja mobiilisovelluksista.
+      Rakennan käyttäjäystävällisiä ja tehokkaita sovelluksia, jotka ratkaisevat todellisia ongelmia. 
+      Nautin ongelmien ratkomisesta sekä puhtaan, skaalautuvan koodin kirjoittamisesta. 
+    </p>
+  </section>
+
+
+
+<section id="portfolio">
+  <h2>Projektini</h2>
+
+  <div class="projects"> <!-- Tämä on moderni grid-kontti -->
+    <div class="project-card">
+      <img src="kuvat/kansikuva.jpg" alt="Projektin kuva">
+      <div class="card-content">
+        <h3>SubWatch</h3>
+        <p>
+          SubWatch – Tilauksien hallintasovellus. SubWatch on mobiilisovellus, joka auttaa käyttäjiä seuraamaan toistuvia tilauksia ja eräpäiviä.
+          Sovelluksessa voi lisätä tilauksia nimellä, summalla ja eräpäivällä, merkitä ne kuukausittaisiksi ja saada muistutuksia 24h/12h ennen eräpäivää.
+          Sovellus on viimeistelty julkaistavaksi Play Storeen. 
+        </p>
+        <a href="https://github.com/kayttaja/projekti" target="_blank">Katso GitHubissa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="contact">
+    <h2>Ota yhteyttä</h2>
+    <p>Sähköposti: <a href="lashoppys@gmail.com">lashoppys@gmail.com</a></p>
+  </section>
+
+  <!-- Tulevaa JavaScript-animaatiota varten -->
+<!-- Particles.js-kirjasto -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+<!-- Alusta animaatio -->
+<script>
+  particlesJS("bg-animation", {
+    "particles": {
+      "number": {
+        "value": 60,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": { "value": "#00e6e6" },
+      "shape": {
+        "type": "circle"
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": true
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#00e6e6",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 0.5,
+        "direction": "none",
+        "out_mode": "out"
+      }
+    },
+    "interactivity": {
+      "events": {
+        "onhover": { "enable": true, "mode": "repulse" },
+        "onclick": { "enable": true, "mode": "push" }
+      },
+      "modes": {
+        "repulse": { "distance": 100 },
+        "push": { "particles_nb": 4 }
+      }
+    },
+    "retina_detect": true
+  });
+</script>
+
+</body>
+</html>
