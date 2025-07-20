@@ -24,13 +24,14 @@ body {
   padding: 0 1rem;
 }
 
-#bg-animation {
-  position: absolute;
+#particles-js {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -1;
+  pointer-events: auto; /* tärkein lisäys */
 }
 
 .hero-content {
@@ -104,7 +105,7 @@ section h2 {
 
 .project-card img {
   width: 100%;
-  height: 200px; /* 2x pienempi kuin oletuskuva */
+  height: 200px;
   object-fit: cover;
   display: block;
 }
@@ -158,6 +159,128 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ===== Palvelut-osio ===== */
+
+#palvelut {
+  padding: 4rem 2rem;
+  color: white;
+}
+
+#palvelut h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2.5rem;
+  color: #00e6e6;
+}
+
+.palvelu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.palvelu-kortti {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3); /* <- sama kuin project-card */
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.palvelu-kortti:hover {
+  transform: translateY(-6px); /* Sama korkeus */
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4); /* Sama varjo */
+}
+
+
+.palvelu-kortti h3 span {
+  color: #00e6e6;
+}
+
+
+
+#tyotapa {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+#tyotapa h2 {
+  font-size: 2rem;
+  color: #00e6e6;
+  margin-bottom: 1.5rem;
+}
+
+.intro-text, .cta-teksti {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.tyotapa-lista {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.tyotapa-lista li {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.keskita {
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(15, 32, 39, 0.85);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+.nav-logo {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00e6e6;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00e6e6;
+}
+
+/* pieni yläreunan tila ettei sisältö mene navbarin alle */
+body {
+  padding-top: 70px;
+}
+
+
 /* Animaatio */
 @keyframes fadeSlideIn {
   0% {
@@ -179,4 +302,27 @@ a:hover {
   .tagline {
     font-size: 1rem;
   }
+}
+
+#contact {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-text {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+.email-plain {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00e6e6;
+}
+
+html {
+  scroll-behavior: smooth;
 }
